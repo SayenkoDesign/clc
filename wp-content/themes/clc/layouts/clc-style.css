@@ -1,0 +1,30 @@
+/* Custom Styles for CLC
+**
+* light bg: #efece6;
+* tan bg: #d5d3c4; (navigation)
+* text: #555;
+* blue: #8badad;
+* grey: #979797; (footer)
+*/
+
+body{background:#efece6;}
+#masthead{
+	background:#d5d3c4;
+	color:#555;
+	padding-top:30px;
+	padding-bottom:30px;
+	position:relative;
+	overflow:hidden;
+	font-size:1.25em;
+}
+	#masthead a, #masthead a:visited{color:#555;}
+	#masthead a:hover, #masthead a:active{color:#111;}
+
+
+footer#colophon{
+	background:#979797;
+	min-height: 14rem;
+	color:#d5d5d5;
+}
+	footer#colophon a:link, footer#colophon a:visited{color:#d5d5d5;}
+	footer#colophon a:hover, footer#colophon a:active{color:#fff;}
