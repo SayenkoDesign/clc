@@ -26,14 +26,16 @@
 		<header id="masthead" class="site-header" role="banner">
 			<div class="row expanded">
 				<div class="row">
-					<div class="column">
-							
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() . '/images/clc-logo.png'; ?>" alt="Covenant Love Community"></a></h1>
+					<div class="column medium-4">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() . '/images/clc-logo.png'; ?>" alt="Covenant Love Community"></a>
 
-
-						<nav id="site-navigation" class="main-navigation" role="navigation">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'clc' ); ?></button>
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</div>
+					<div class="column medium-8">
+						<nav>
+							<?php wp_nav_menu( array( 
+				            'theme_location' => 'primary',
+				            'items_wrap' => '<ul class="header-nav menu">%3$s</ul>'
+				                ) ); ?>
 						</nav><!-- #site-navigation -->
 					</div><!-- column -->
 				</div><!-- row -->

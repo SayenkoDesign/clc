@@ -1,13 +1,17 @@
 /* Custom Styles for CLC
 **
-* light bg: #efece6;
+* light bg/text: #efece6;
 * tan bg: #d5d3c4; (navigation)
 * text: #555;
 * blue: #8badad;
 * grey: #979797; (footer)
 */
 
-body{background:#efece6;}
+body{
+	background:#efece6;
+	font-family:Roboto;
+	color:#555;
+}
 #masthead{
 	background:#d5d3c4;
 	color:#555;
@@ -16,15 +20,126 @@ body{background:#efece6;}
 	position:relative;
 	overflow:hidden;
 	font-size:1.25em;
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 	#masthead a, #masthead a:visited{color:#555;}
 	#masthead a:hover, #masthead a:active{color:#111;}
+ul.header-nav{
+	float:right;
+	margin-top:1rem;
+}
 
+/* Home Styles */
+.home-image{
+	position:relative;
+	max-height:425px;
+	overflow:hidden;
+}
+.home-image img{
+   	width: 100%;
+   	height:100%;
+}
+
+.home .entry-content{
+	font-size:2rem;
+	text-align: center;
+	max-width:56rem;
+	margin:4rem auto;
+}
+.home article .row{
+	padding:3em 0.625em;
+	border-top:#fff 2px solid;
+	border-bottom:#d5d3c4 2px solid;
+}
+.home h2{
+	font-weight: 700;
+	font-size:1.5em;
+	position:relative;
+	line-height: 1.6em;
+    margin-bottom: .75em;
+}
+	.home h2:after{  
+		content:""; 
+	  	background: #555; 
+	  	position: absolute; 
+	  	bottom: 0; 
+	  	left: 0; 
+	  	height: 2px; 
+	  	width: 2em;
+	}
+.box{
+	background:#fff;
+	border-radius:5px;
+	padding:0 1.125em 1.5em;
+	border:2px solid #bebebe;
+}
+.box h3{
+	position: relative;
+	line-height: 1.6em;
+	margin-bottom:.75em;
+	padding:1em 0;
+	color:#8badad;
+	font-size:1.125em;
+	font-weight: 700;
+}
+	.box h3:after{
+		content:"";
+		background:#979797;
+  		position: absolute; 
+  		bottom: 0; 
+  		left: 0; 
+  		height: 2px; 
+  		width: 2em;
+	}
+
+@media screen and (max-width:40em){
+	.home .entry-content{
+		font-size:1.2rem;
+	}
+}
+/* End Home Styles */
 
 footer#colophon{
 	background:#979797;
 	min-height: 14rem;
 	color:#d5d5d5;
+	padding-top:2em;
 }
 	footer#colophon a:link, footer#colophon a:visited{color:#d5d5d5;}
 	footer#colophon a:hover, footer#colophon a:active{color:#fff;}
+ul.footer-nav{
+	float:right;
+	margin-top:2rem;
+}
+@media screen and (max-width: 40em){
+	footer#colophon{
+		text-align:center;
+	}
+	ul.footer-nav{
+		display:inline-block;
+		float:none;
+	}
+}
+
+/* GLOBAL STYLES */
+.btn{
+	background:#8badad;
+	color:#efece6;
+	border-radius:3px;
+	font-size:1.5rem;
+	padding:.5em 1.3em;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+	transition: all .2s;
+}
+	.btn:hover{
+		opacity:.8;
+		box-shadow: none; 
+		transition: all .2s;
+		color:#fff;
+	}
+
+#map{
+	width:100%;
+	height:28rem;
+}
