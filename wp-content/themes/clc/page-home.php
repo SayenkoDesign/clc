@@ -10,7 +10,7 @@
  */
 
 get_header(); ?>
-<div class="row expanded home-image">
+<div class="row expanded full-image">
 	<?php
 	if ( has_post_thumbnail() ) {
     	the_post_thumbnail();
@@ -55,6 +55,7 @@ get_header(); ?>
 					</div>
 					<div class="column medium-4 box-wrapper">
 						<div class="box" data-equalizer-watch>
+							<img src="http://localhost:8888/sayenkoDesign/clc/wp-content/uploads/2016/06/open-bible.jpg" alt="Bible Study">
 							<h3>Bible Study</h3>
 							<p>Sat. May 30, Classroom 3b</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget consequat elit. Fusce ut diam sit amet ex ultrices porta vel sed erat. Maecenas eu mauris consectetur, posuere magna </p>
@@ -62,6 +63,7 @@ get_header(); ?>
 					</div>
 					<div class="column medium-4 box-wrapper">
 						<div class="box" data-equalizer-watch>
+							<img src="http://localhost:8888/sayenkoDesign/clc/wp-content/uploads/2016/06/old-service.jpg" alt="Leadership Training">
 							<h3>Leadership Training</h3>
 							<p>Sat. May 30, Classroom 3b</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget consequat elit. Fusce ut diam</p>

@@ -17,7 +17,7 @@
 <div class="row expanded">
     <div id="map"></div>
 </div>
-<script>
+<!--<script>
   function initMap() {
     var mapDiv = document.getElementById('map');
     var map = new google.maps.Map(mapDiv, {
@@ -34,7 +34,7 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
     async defer></script>
- 
+ -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">	<div class="row expanded">	
 		<div class="row">
