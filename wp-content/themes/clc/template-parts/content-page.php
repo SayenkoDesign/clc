@@ -8,39 +8,40 @@
  */
 
 ?>
+<div class="column medium-10 medium-offset-1 large-8 large-offset-2">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php
-	if ( !has_post_thumbnail() ) {
-		print('<header class="entry-header">');
-		the_title( '<h1 class="entry-title">', '</h1>' );
-		print('</header>');
-	}
-	?>
-
-	<div class="entry-content">
 		<?php
-			the_content();
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clc' ),
-				'after'  => '</div>',
-			) );
+		if ( !has_post_thumbnail() ) {
+			print('<header class="entry-header">');
+			the_title( '<h1 class="entry-title">', '</h1>' );
+			print('</header>');
+		}
 		?>
-	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'clc' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-		?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+		<div class="entry-content">
+			<?php
+				the_content();
+
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'clc' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+
+		<footer class="entry-footer">
+			<?php
+				edit_post_link(
+					sprintf(
+						/* translators: %s: Name of current post */
+						esc_html__( 'Edit %s', 'clc' ),
+						the_title( '<span class="screen-reader-text">"', '"</span>', false )
+					),
+					'<span class="edit-link">',
+					'</span>'
+				);
+			?>
+		</footer><!-- .entry-footer -->
+	</article><!-- #post-## -->
+</div>

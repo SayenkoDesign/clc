@@ -31,5 +31,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 </div><!-- row column -->
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

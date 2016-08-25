@@ -51,7 +51,7 @@ get_header(); ?>
 					<div class="column medium-4">
 						<h2>Upcoming Events</h2>
 						<p>Our church is a thriving community, involved in each other’s lives not only on Sundays, but throughout the week. Visit our calendar for a more complete list of upcoming events.</p>
-						<p><a class="btn">Visit Calendar</a></p>
+						<p><a class="btn">View Events</a></p>
 					</div>
 					<div class="column medium-4 box-wrapper">
 						<div class="box" data-equalizer-watch>
