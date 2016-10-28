@@ -36,58 +36,110 @@ get_header(); ?>
 					<div class="column medium-4">
 						<h2>Address &amp; Contact</h2>
 						<p>
-							1768 Dryden Road,
-							Freeville, NY 13068
-							P:(607) 347-4411
-							E: info@covenantlove.com
+						<?php 
+							$contact = get_field("contact");
+							echo $contact;
+						?>
 						</p>
 					</div>
 					<div class="column medium-8">
 						<h2>Sunday Mornings</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget consequat elit. Fusce ut diam sit amet ex ultrices porta vel sed erat. Maecenas eu mauris consectetur, posuere magna vitae, fringilla nibh. Vivamus bibendum nisl ut neque ultricies tincidunt. Ut aliquam lacus elit, iaculis placerat mi fermentum nec. Sed nec </p>
+						<p>
+						<?php 
+							$sunday_mornings = get_field("sunday_mornings");
+							echo $sunday_mornings;
+						?>
+						</p>
 					</div>
 				</div>
 				<div class="row" data-equalizer data-equalizer-on="medium">
 					<div class="column medium-4">
 						<h2>Upcoming Events</h2>
-						<p>Our church is a thriving community, involved in each other’s lives not only on Sundays, but throughout the week. Visit our calendar for a more complete list of upcoming events.</p>
+						<p>
+						<?php 
+							$events = get_field("events");
+							echo $events;
+						?>							
+						</p>
 						<p><a class="btn">View Events</a></p>
 					</div>
+					
+<?php
+
+
+$args = array( 'posts_per_page' => 2, 'category' => 3 );
+
+$myposts = get_posts( $args );
+foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					<div class="column medium-4 box-wrapper">
 						<div class="box" data-equalizer-watch>
-							<img src="http://localhost:8888/sayenkoDesign/clc/wp-content/uploads/2016/06/open-bible.jpg" alt="Bible Study">
-							<h3>Bible Study</h3>
-							<p>Sat. May 30, Classroom 3b</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget consequat elit. Fusce ut diam sit amet ex ultrices porta vel sed erat. Maecenas eu mauris consectetur, posuere magna </p>
+							<?php if ( has_post_thumbnail() ) : ?>
+							    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+							        <?php the_post_thumbnail(); ?>
+							    </a>
+							<?php endif; ?>
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<p><?php 
+								$date = get_field("event-date");
+								$location = get_field("location");
+								echo $date;
+								if($location)
+									echo ', ' . $location; 
+								?></p>
+							<p><?php the_excerpt(); ?> </p>
 						</div>
 					</div>
-					<div class="column medium-4 box-wrapper">
-						<div class="box" data-equalizer-watch>
-							<img src="http://localhost:8888/sayenkoDesign/clc/wp-content/uploads/2016/06/old-service.jpg" alt="Leadership Training">
-							<h3>Leadership Training</h3>
-							<p>Sat. May 30, Classroom 3b</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget consequat elit. Fusce ut diam</p>
-						</div>
-					</div>
+
+<?php endforeach; 
+wp_reset_postdata();?>
+
 				</div>
 				<div class="row" data-equalizer>
 					<div class="column medium-4">
 						<h2>Ministries</h2>
-						<p>Our church is a thriving community, involved in each other’s lives not only on Sundays, but throughout the week. Visit our calendar for a more complete list of upcoming events.</p>
+						<p>
+						<?php 
+							$ministries = get_field("ministries");
+							echo $ministries;
+						?>	
+						</p>
 					</div>
-					<div class="column medium-4 box-wrapper">
-						<div class="box" data-equalizer-watch>
-							<h3>Christian School</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget consequat elit. Fusce ut diam sit amet ex ultrices porta vel sed erat. Maecenas eu mauris consectetur, posuere magna </p>
+		
+				<?php			
+				// check if the repeater field has rows of data
+				if( have_rows('ministry') ):
+
+				 	// loop through the rows of data
+				    while ( have_rows('ministry') ) : the_row();
+						$hyperlink = get_sub_field('ministry_hyperlink');
+						$image = get_sub_field('ministry_image');
+						$title = get_sub_field('ministry_title');
+					?>
+						<div class="column medium-4 box-wrapper">
+							<div class="box" data-equalizer-watch>						<?php if ( $image ){ ?>
+							        <?php echo '<a href="'.$hyperlink.'"><img src="'. $image .'" alt="'. $title .'"></a>'; 
+							        } ?>
+								<h3><?php 
+									if($hyperlink){
+										echo '<a href="'. $hyperlink .'">'.$title.'</a>';
+									}
+									else
+										echo $title;
+									
+									?>
+								</h3>
+								<?php the_sub_field('ministry_description'); ?>
+							</div>
 						</div>
-					</div>
-					<div class="column medium-4 box-wrapper">
-						<div class="box" data-equalizer-watch>
-							<h3>Hardesty House</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget consequat elit. Fusce ut diam</p>
-						</div>
-					</div>
-				</div>
+				    
+				        
+				    <?php
+				    endwhile;
+					
+					endif;
+					?>
+
+				</div><!-- .row data-equalizer -->
 
 
 

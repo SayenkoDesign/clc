@@ -11,7 +11,8 @@ get_header(); ?>
 <div class="row column">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+<div class="row">
+<div class="columns large-offset-2 large-8 medium-offset-1 medium-10">
 		<?php
 		while ( have_posts() ) : the_post();
 
@@ -26,7 +27,7 @@ get_header(); ?>
 
 		endwhile; // End of the loop.
 		?>
-
+</div></div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- row column -->

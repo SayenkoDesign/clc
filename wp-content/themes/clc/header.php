@@ -26,11 +26,11 @@
 		<header id="masthead" class="site-header" role="banner">
 			<div class="row expanded">
 				<div class="row">
-					<div class="column medium-4">
+					<div class="column medium-4 large-3 large-offset-1">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri() . '/images/clc-logo.png'; ?>" alt="Covenant Love Community"></a>
 
 					</div>
-					<div class="column medium-8">
+					<div class="column medium-8 large-7" style="float:left;">
 						<nav>
 							<?php wp_nav_menu( array( 
 				            'theme_location' => 'primary',

@@ -78,6 +78,8 @@ ul.header-nav{
 	font-size:1.125em;
 	font-weight: 700;
 }
+.box h3 a:link, .box h3 a:visited{color:#8badad;}
+.box h3 a:hover, .box h3 a:active{color:#444;}
 	.box h3:after{
 		content:"";
 		background:#979797;
