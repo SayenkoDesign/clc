@@ -12,6 +12,12 @@ body{
 	font-family:Roboto;
 	color:#555;
 }
+
+a:link, a:visited{text-decoration:none; color:#b45b4a; transition: all .2s;}
+a:hover, a:active{text-decoration:underline; color:#222; transition: all .2s;}
+
+
+
 #masthead{
 	background:#d5d3c4;
 	color:#555;
@@ -129,8 +135,46 @@ ul.header-nav{
     font-weight: bold;
     letter-spacing: 5px;
 }
+/************
+BLOG
+***********/
+body.blog h2.entry-title {
+	color:#444;
+	font-size:1.2em;
+	font-weight:bold;
+}
+body.blog h2.entry-title:after
+{
+    content:' ';
+    display:block;
+    border:1px solid black;
+    width:2em;
+    margin-top:.5em;
+}
+body.blog h2.entry-title a:link, body.blog h2.entry-title a:visited{color:#444; transition: all .2s;}
+body.blog h2.entry-title a:hover, body.blog h2.entry-title a:active{color:#000; transition: all .2s;}
 
+body.blog article{
+	padding:2em 0;
+	margin:0;
+	border-bottom:1px solid #dedcdc;
+	border-top:1px solid #fff;
+}
 
+body.blog #main > .row:first-child > .columns > article{
+	padding-top:0;
+	border-top:0;
+}
+
+.more-link{
+	display:block;
+	float:right;
+	margin:2em 0 1em;
+}
+
+/************
+FOOTER
+************/
 footer#colophon{
 	background:#979797;
 	min-height: 14rem;

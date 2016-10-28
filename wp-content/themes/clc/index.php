@@ -13,20 +13,21 @@
  */
 
 get_header(); ?>
+		<?php
+
+			if ( is_home() && ! is_front_page() ) : ?>
+				<div class="row expanded full-image"><img width="1200" height="276" src="http://localhost:8888/sayenkoDesign/clc/wp-content/uploads/2016/05/blog-banner.jpg"  alt="Blog"><h1 class="entry-title">Blog</h1></div>
+
+			<?php
+			
+			endif;
+			?>
 <div class="row column">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php
+<?php
 		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
@@ -52,5 +53,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 </div><!-- row column -->
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

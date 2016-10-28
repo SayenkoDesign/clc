@@ -67,7 +67,7 @@ get_header(); ?>
 <?php
 
 
-$args = array( 'posts_per_page' => 2, 'category' => 3 );
+$args = array( 'posts_per_page' => 2, 'tag_id' => 4 );
 
 $myposts = get_posts( $args );
 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
