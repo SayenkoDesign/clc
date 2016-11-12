@@ -180,6 +180,7 @@ footer#colophon{
 	min-height: 14rem;
 	color:#d5d5d5;
 	padding-top:2em;
+	box-shadow: 0px 500px 0px 500px #979797;
 }
 	footer#colophon a:link, footer#colophon a:visited{color:#d5d5d5;}
 	footer#colophon a:hover, footer#colophon a:active{color:#fff;}

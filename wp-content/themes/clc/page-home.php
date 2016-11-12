@@ -54,14 +54,14 @@ get_header(); ?>
 				</div>
 				<div class="row" data-equalizer data-equalizer-on="medium">
 					<div class="column medium-4">
-						<h2>Upcoming Events</h2>
+						<h2>Blog</h2>
 						<p>
 						<?php 
-							$events = get_field("events");
-							echo $events;
+							$blog = get_field("blog");
+							echo $blog;
 						?>							
 						</p>
-						<p><a class="btn">View Events</a></p>
+						<p><a class="btn">View Blog</a></p>
 					</div>
 					
 <?php
