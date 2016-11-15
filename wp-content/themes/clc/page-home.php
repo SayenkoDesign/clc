@@ -61,7 +61,6 @@ get_header(); ?>
 							echo $blog;
 						?>							
 						</p>
-						<p><a class="btn">View Blog</a></p>
 					</div>
 					
 <?php

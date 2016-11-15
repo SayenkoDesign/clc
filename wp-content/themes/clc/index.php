@@ -16,7 +16,7 @@ get_header(); ?>
 		<?php
 
 			if ( is_home() && ! is_front_page() ) : ?>
-				<div class="row expanded full-image"><img width="1200" height="276" src="http://localhost:8888/sayenkoDesign/clc/wp-content/uploads/2016/05/blog-banner.jpg"  alt="Blog"><h1 class="entry-title">Blog</h1></div>
+				<div class="row expanded full-image"><img width="1200" height="276" src="http://localhost:8888/sayenkoDesign/clc/wp-content/uploads/2016/05/blog-banner.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image"  alt="Blog" /><h1 class="entry-title">Blog</h1></div>
 
 			<?php
 			

@@ -7,6 +7,9 @@
 * grey: #979797; (footer)
 */
 
+h1{color:#8badad;}
+
+
 body{
 	background:#efece6;
 	font-family:Roboto;
@@ -42,7 +45,7 @@ ul.header-nav{
 }
 
 .home .entry-content{
-	font-size:2rem;
+	font-size:1.5rem;
 	text-align: center;
 	max-width:56rem;
 	margin:1rem auto 0em;
@@ -129,12 +132,35 @@ ul.header-nav{
     z-index: 3;
     width: 100%;
     text-align: center;
-    margin-top: -15%;
     text-transform: uppercase;
-    font-size:4.5em;
+    font-size:4em;
     font-weight: bold;
     letter-spacing: 5px;
+	top: 50%;
+	transform: translateY(-170%);
 }
+.blog #content .full-image h1{transform: translateY(-100%);}
+@media screen and (max-width:60em){
+	#content .full-image h1{
+		font-size:3em;
+	}
+}
+@media screen and (max-width:40em){
+	#content .full-image h1{
+		font-size:2em;
+	}
+	.full-image{margin-bottom:1em;}
+}
+@media screen and (max-width:30em){
+	#content .full-image h1{font-size:1em;}
+}
+
+/************
+PAGE
+************/
+.page h1{font-weight: bold; margin-top:2em;}
+
+
 /************
 BLOG
 ***********/
@@ -208,6 +234,8 @@ ul.footer-nav{
 	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
 	transition: all .2s;
 }
+a.btn, a.btn:visited{color:#efece6;}
+a.btn:hover, a.btn:active{color:#fff;}
 	.btn:hover{
 		opacity:.8;
 		box-shadow: none; 
