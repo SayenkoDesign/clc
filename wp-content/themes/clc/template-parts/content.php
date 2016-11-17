@@ -8,8 +8,10 @@
  */
 
 ?>
+<div class="row">
+<div class="columns large-offset-1 large-10">
 <div class="row" data-equalizer data-equalize-on="medium">
-	<div class="columns medium-7 end" data-equalizer-watch>
+	<div class="columns medium-7" data-equalizer-watch>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
@@ -49,7 +51,9 @@
 		</article><!-- #post-## -->
 	</div>
 	
-	<div class="columns medium-offset-1 medium-3" data-equalizer-watch>
+	<div class="columns medium-3" data-equalizer-watch>
 		<?php get_sidebar(); ?>
 	</div>
+</div>
+</div>
 </div>

@@ -159,7 +159,9 @@ ul.header-nav{
 PAGE
 ************/
 .page h1{font-weight: bold; margin-top:2em;}
+.page #content img{box-shadow:1px 1px 3px 0px rgba(0,0,0,0.3)}
 
+.page .staff{margin-bottom:1.5em;} /*Spacing for staff members*/
 
 /************
 BLOG
@@ -167,6 +169,10 @@ BLOG
 body.blog h2.entry-title {
 	color:#444;
 	font-size:1.2em;
+	font-weight:bold;
+}
+body.blog h2.widget-title {
+	font-size:1.4em;
 	font-weight:bold;
 }
 body.blog h2.entry-title:after
@@ -186,11 +192,7 @@ body.blog article{
 	border-bottom:1px solid #dedcdc;
 	border-top:1px solid #fff;
 }
-
-body.blog #main > .row:first-child > .columns > article{
-	padding-top:0;
-	border-top:0;
-}
+body.blog #main > .row:first-of-type article{border-top:0; padding-top:0;}
 
 .more-link{
 	display:block;
