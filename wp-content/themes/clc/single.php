@@ -18,19 +18,19 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-		?>
-		<div class="row">
-			<div class="columns large-offset-1 large-10">
-				<?php
-				the_post_navigation();
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-				?>
+			?>
+			<div class="row">
+				<div class="columns large-offset-1 large-10">
+					<?php
+					the_post_navigation();
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
+					?>
+				</div>
 			</div>
-		</div>
-		<?php
+			<?php
 
 		endwhile; // End of the loop.
 		?>
